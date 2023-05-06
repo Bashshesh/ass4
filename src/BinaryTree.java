@@ -73,4 +73,22 @@ public class BinaryTree {
     public void inOrder(){
         inOrder(root);
     }
+    private Node getValue(Node current, int data){
+        if(current == null)
+            return null;
+        if(data < current.data){
+            current.left = getValue(current.left, data);
+        } else if (data > current.data) {
+            current.right = getValue(current.right, data);
+        }
+        if(data == current.data){
+            System.out.println();
+            System.out.print(current.data);
+            return current;
+        }
+        return current;
+    }
+    public void getValue(int data){
+        getValue(root, data);
+    }
 }
