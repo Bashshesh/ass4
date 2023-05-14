@@ -55,5 +55,13 @@ public class MyHashTable<K, V> {
             }
         }
     }
-
+    public int size() {
+        return size;
+    }
+    public void printBuckets() {
+        for (int i = 0; i < buckets.size(); i++) {
+            ArrayList<Node<K, V>> bucket = buckets.get(i);
+            System.out.println("Bucket " + i + ": " + bucket.size() + " elements");
+        }
+    }
 }
