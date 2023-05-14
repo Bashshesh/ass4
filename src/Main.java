@@ -55,7 +55,7 @@ public class Main {
                 return result;
             }
 
-            //compares the value variable of MyTestingClass instances for equality
+            //compares the value variable of MyTestingClass if they equal
             @Override
             public boolean equals(Object o) {
                 if (this == o) return true;
@@ -66,10 +66,9 @@ public class Main {
         }
 
         class Student {
-            private int id;
+            private int id;//private потому что так надо
             private String name;
 
-            //takes an integer ID and a string Name as parameters and sets them to the corresponding instance variables
             public Student(int id, String name) {
                 this.id = id;
                 this.name = name;
@@ -91,7 +90,7 @@ public class Main {
                 return id;
             }
 
-            //returns true if the passed object is a Student object with the same id and name field values as this instance
+            //returns true if the same id
             @Override
             public boolean equals(Object obj) {
                 if (this == obj) {
@@ -118,4 +117,3 @@ public class Main {
                        * *
                         *
          */
-}
