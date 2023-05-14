@@ -34,4 +34,17 @@ public class MyHashTable<K, V> {
         size++;
     }
 
+    public V get(K key) {
+        int hash = key.hashCode() % buckets.size();
+        ArrayList<Node<K, V>> bucket = buckets.get(hash);
+        for (Node<K, V> node : bucket) {
+            if (node.key.equals(key)) {
+                return node.value;
+            }
+        }
+        return null;
+    }
+
+
+
 }
