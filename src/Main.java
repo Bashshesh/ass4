@@ -16,19 +16,17 @@ public class Main {
         tree.getValue(7);
 
 
-
-
- //creates a new MyHashTable instance and generates 10000 random key-value pairs using MyTestingClass and Student classes as key and value respectively. Finally, it prints the contents of the hash table's buckets
-                MyHashTable<MyTestingClass, Student> table = new MyHashTable<>();
-                Random random = new Random();
-                for (int i = 0; i < 10000; i++) {
-                    MyTestingClass key = new MyTestingClass(Integer.toString(random.nextInt(1000)));
-                    Student value = new Student(5, "Ansar Bashayev");
-                    table.put(key, value);
-                }
-                table.printBuckets();
-            }
-
+        //creates a new MyHashTable instance and generates 10000 random key-value pairs using MyTestingClass and Student classes as key and value respectively. Finally, it prints the contents of the hash table's buckets
+        MyHashTable<MyTestingClass, Student> table = new MyHashTable<>();
+        Random random = new Random();
+        for (int i = 0; i < 10000; i++) {
+            MyTestingClass key = new MyTestingClass(Integer.toString(random.nextInt(1000)));
+            Student value = new Student(5, "Ansar Bashayev");
+            table.put(key, value);
+        }
+        table.printBuckets();
+    }
+}
         class MyTestingClass {
             private String value;
 
@@ -120,5 +118,4 @@ public class Main {
                        * *
                         *
          */
-    }
 }
