@@ -1,5 +1,5 @@
 public class BinaryTree {
-
+//it is just not my assignment, it is binary tree, just ignore it
     static class Node{
         int data;
         Node left, right;
