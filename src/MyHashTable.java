@@ -44,7 +44,16 @@ public class MyHashTable<K, V> {
         }
         return null;
     }
-
-
+    public void remove(K key) {
+        int hash = key.hashCode() % buckets.size();
+        ArrayList<Node<K, V>> bucket = buckets.get(hash);
+        for (Node<K, V> node : bucket) {
+            if (node.key.equals(key)) {
+                bucket.remove(node);
+                size--;
+                return;
+            }
+        }
+    }
 
 }
