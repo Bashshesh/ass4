@@ -92,7 +92,7 @@ public class MyHashTable<K, V> {
             ArrayList<Node<K, V>> bucket = buckets.get(i);
             bucket.add(new Node<>(key, value));
         }
-
+//asddasdas
     }
 
     //prints the number of elements in each bucket of a hash table. It iterates through all the buckets and prints their index and size
