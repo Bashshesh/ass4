@@ -2,11 +2,26 @@ import java.util.Random;
 import java.util.Objects;
 public class Main {
     public static void main(String[] args) {
+        //there the 5 assigmnent and code that we don't need, so just ignore it
+        BinaryTree tree = new BinaryTree();
+        tree.insert(3);
+        tree.insert(4);
+        tree.insert(1);
+        tree.insert(15);
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(8);
+        tree.insert(7);
+        tree.inOrder();
+        tree.getValue(7);
+
+
+        //creates a new MyHashTable instance and generates 10000 random key-value pairs using MyTestingClass and Student classes as key and value respectively. Finally, it prints the contents of the hash table's buckets
         MyHashTable<MyTestingClass, Student> table = new MyHashTable<>();
         Random random = new Random();
         for (int i = 0; i < 10000; i++) {
-            MyTestingClass key = new MyTestingClass(Integer.toString(random.nextInt(1000)));
-            Student value = new Student(5, "Ansar Bashaev");
+            MyTestingClass key = new MyTestingClass(Integer.toString(random.nextInt(100)));
+            Student value = new Student(5, "Ansar Bashayev");
             table.put(key, value);
         }
         table.printBuckets();
